@@ -1,18 +1,15 @@
 # Quant Risk Desk: Automated Portfolio Intelligence Pipeline
 
-[![Technology Stack](https://img.shields.io/badge/Stack-Python%20%7C%20Postgres%20%7C%20dbt%20%7C%20Airflow-blue)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 An end-to-end financial engineering platform that automates the ingestion, validation, analysis, and visualization of sector-level market risk. This project demonstrates a production-grade analytics stack built to identify "Black Swan" correlation events and macroeconomic regime shifts across the S&P 500.
 
 ---
 
-## 📊 The Core Thesis: "Diversification Evaporation"
+## The Core Thesis: "Diversification Evaporation"
 The primary quantitative insight of this project is the mathematical proof of **Correlation Breakdown**. By calculating rolling 63-day pairwise correlations across 11 sectors, the system visualizes how sector diversification (avg. 0.47) violently collapses toward 1.00 (avg. 0.89) during systemic shocks like the March 2020 COVID crisis.
 
 ---
 
-## 🏗️ Architecture & Technology Stack
+## Architecture & Technology Stack
 
 ```mermaid
 graph LR
@@ -52,7 +49,7 @@ graph LR
 
 ---
 
-## 📈 Quantitative Features
+## Quantitative Features
 - **Rolling Risk Metrics**: Annualized Volatility, 252-day Sharpe & Sortino Ratios.
 - **Systemic Sensitivity**: Rolling 1-year Beta calculated via covariance matrices against the S&P 500.
 - **Tail Risk Engine**: Historical Simulation VaR (95% & 99%) and Conditional VaR (Expected Shortfall).
@@ -61,7 +58,7 @@ graph LR
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Docker & Docker Compose
@@ -89,7 +86,7 @@ graph LR
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 ```text
 ├── airflow/            # DAG definitions and Airflow config
 ├── dbt_project/        # dbt models (Staging, Intermediate, Marts)
@@ -104,9 +101,9 @@ graph LR
 
 ---
 
-## 👤 Contact & Contribution
-Created by **[Your Name]**.  
-Feel free to reach out via [LinkedIn](https://linkedin.com) or [Email](mailto:example@email.com) for collaboration!
+## Contact & Contribution
+Created by **Harthik Mallichetty**.  
+Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/harthikrm/) or [Email](harthikmallichetty@gmail.com) for collaboration!
 
 ---
 > [!NOTE]
