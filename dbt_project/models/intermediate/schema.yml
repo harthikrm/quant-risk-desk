@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: int_daily_returns
+    description: "Filters daily log returns ensuring no nulls."
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: ticker
+        tests:
+          - not_null
+
+  - name: int_rolling_stats
+    description: "Rolling 21, 63, and 252-day window functions for means and devs."
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: std_252d
+        description: "Must be positive."
+
+  - name: int_macro_regimes
+    description: "Labels macro regimes based on indicators."
+    columns:
+      - name: regime_label
+        tests:
+          - accepted_values:
+              values: ['Recession', 'Inflation Shock', 'Risk-Off', 'Risk-On', 'Normal']

@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: mart_var_cvar
+    description: "Historical simulation VaR and CVaR at 95% and 99%."
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: ticker
+        tests:
+          - not_null
+      - name: var_95
+        description: "Must be <= 0"
+
+  - name: mart_risk_ratios
+    description: "Sharpe, Sortino, and rolling Beta."
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: ticker
+        tests:
+          - not_null
+
+  - name: mart_drawdown
+    description: "Rolling maximum drawdown and underwater."
+    columns:
+      - name: drawdown_pct
+        description: "Must be <= 0"
+
+  - name: mart_correlation
+    description: "Rolling 63d pairwise correlation matrix."
+    columns:
+      - name: correlation_63d
+        tests:
+          - not_null
+
+  - name: mart_macro_overlay
+    description: "Combined wide table connecting risk metrics to macro signals."
+    columns:
+      - name: regime_label
+        tests:
+          - not_null
+
+  - name: mart_sector_summary
+    description: "Current snapshot of all 11 ETF sector KPIs."
+    columns:
+      - name: ticker
+        tests:
+          - unique
+          - not_null

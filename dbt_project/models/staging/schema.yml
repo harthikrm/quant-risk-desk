@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw data loaded from yfinance and FRED"
+    schema: raw
+    tables:
+      - name: prices
+        description: "Raw OHLCV data for ETFs"
+      - name: macro_indicators
+        description: "Raw macro data from FRED"
+
+models:
+  - name: stg_prices
+    description: "Cleaned daily prices with log returns and sector mapping"
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: ticker
+        tests:
+          - not_null
+
+  - name: stg_macro
+    description: "Pivoted macro indicators aligned by date"
+    columns:
+      - name: date
+        tests:
+          - not_null

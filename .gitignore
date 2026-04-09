@@ -1,0 +1,32 @@
+# Environment variables
+.env
+.venv
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Data
+data/raw/prices/*
+!data/raw/prices/.gitkeep
+data/raw/macro/*
+!data/raw/macro/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# dbt
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Tableau exports
+tableau/data_exports/*.csv
+
+# OS
+.DS_Store
